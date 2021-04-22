@@ -59,6 +59,7 @@
 </head>
 <body>
     <p id="demo"></p>
+    <p id="redirecting" class="nima">PRZEKIEROWYWANIE...</p>
     <a id="link" class="nima" href="https://www.youtube.com/channel/UCW02jezx5RAq26CSQSrfvTw">👉PREMIERA TUTAJ👈</a>
     <audio src="fragments.mp3" id="music" controls loop></audio>
 
@@ -81,7 +82,9 @@
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").classList.add("nima");
-        document.getElementById("link").classList.remove("nima");
+        document.getElementById("redirecting").classList.remove("nima");
+        //document.getElementById("link").classList.remove("nima");
+        window.open("https://youtu.be/lYp0UaVlVRM", '_self');
     }
     }, 1000);
     </script>
